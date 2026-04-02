@@ -4,7 +4,7 @@ def fetch_and_save_data():
     url = "https://apiservice.mol.gov.tw/OdService/download/A17000000J-000003-U9H"
     
     try:
-        response = requests.get(url)
+        response = requests.get(url, verify=False)
         response.raise_for_status()
         
         response.encoding = 'utf-8-sig'
